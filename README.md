@@ -1,8 +1,7 @@
 RAG-Powered News Chatbot - Backend
 Overview
 
-This is the backend for a RAG (Retrieval-Augmented Generation) powered chatbot over news articles.
-It handles:
+This is the backend for a RAG (Retrieval-Augmented Generation) powered chatbot over news articles. It handles:
 
 Embedding user queries
 
@@ -59,9 +58,8 @@ COLLECTION_NAME=news_articles
 # Redis
 REDIS_URL=redis://redis:6379
 
-# Embedding service
+# Embedding service (Python microservice)
 EMBED_SERVICE=http://embed-service:5001
-
 
 
 Run the backend using Docker Compose:
@@ -69,7 +67,11 @@ Run the backend using Docker Compose:
 docker-compose up --build
 
 
-Health check:
+Health Check:
 
 curl http://localhost:4000/health
-# Should return: {"ok": true}
+
+
+Should return:
+
+{"ok": true}
